@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 using SteamKit2;
 
@@ -47,13 +48,20 @@ namespace PTLauncher.News
             {
                 const string clanImageBase = "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans";
 
+                string image;
+
                 if (contents.Contains("STEAM_CLAN_IMAGE"))
                 {
-                    string image = Regex.Match(contents, "((?<=STEAM_CLAN_IMAGE})(.[/s]*){1,60}((.png)|(.jpg)))").Value;
-                    return clanImageBase + image;
+                    image = clanImageBase + Regex.Match(contents, "((?<=STEAM_CLAN_IMAGE})(.[/s]*){1,60}((.png)|(.jpg)))").Value;
+                    return image;
+                }
+                else
+                {
+                    image = Regex.Match(contents, "((" + clanImageBase + ")(.[/s]*){1,90}((.png)|(.jpg)))").Value;
                 }
 
-                return string.Empty;
+                Debug.WriteLine(image);
+                return image;
             }
         }
     }
