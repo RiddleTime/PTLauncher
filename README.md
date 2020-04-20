@@ -8,7 +8,7 @@ This is a fork from: https://bitbucket.org/JOGARA/ptlauncher/src/master/
 ### Planned features  ###
 
 * Links to website, forum, discord, steam community and to buy GP (90% done)
-* News from Steam hub via RSS feed
+* News from Steam hub via Steam Web API (90% done)
 * Language select via drop down or flag buttons (80% done)
 
 
