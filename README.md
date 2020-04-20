@@ -3,6 +3,8 @@
 This git is for the Project Torque Launcher. Concept stage at the moment. 
 It uses WPF from Visual Studios 2019
 
+This is a fork from: https://bitbucket.org/JOGARA/ptlauncher/src/master/
+
 ### Planned features  ###
 
 * Links to website, forum, discord, steam community and to buy GP (90% done)
