@@ -47,6 +47,8 @@ namespace PTLauncher.News
             /**
              * <summary>Obtains the first image within the content of a new post</summary>
              * It can filter 2 kind of images, them with some kind of steam preset {STEAM_CLAN_IMAGE} and the ones with that part replaced with the actual link.
+             * 
+             * if no image is found it will use the default Project Torque splash image
              */
             private string FindImageSource(string contents)
             {
@@ -61,6 +63,11 @@ namespace PTLauncher.News
                 else
                 {
                     image = Regex.Match(contents, "((" + clanImageBase + ")(.[/s]*){1,90}((.png)|(.jpg)))").Value;
+                }
+
+                if (image == string.Empty)
+                {
+                    image = "images/PTsplash.png";
                 }
 
                 return image;
