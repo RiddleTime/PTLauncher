@@ -12,7 +12,7 @@
         
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="450" Width="800" ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None">
+        Title="MainWindow" Width="800" Height="480"  ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None">
 
     <Window.Resources>
         <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></local:BoolToVisibilityConverter>
@@ -22,7 +22,7 @@
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
         <ComboBox HorizontalAlignment="Left" Margin="678,307,0,0" VerticalAlignment="Top" Width="112" ItemsSource="{Binding Places}" SelectedItem="{Binding SelectedPlace}" DisplayMemberPath="City" SelectedIndex="1"  />
 
-        <Button x:Name="play" Margin="678,334,17,21" Click="Button_Play" Panel.ZIndex="1">
+        <Button x:Name="play" Margin="678,350,17,5" Click="Button_Play" Panel.ZIndex="1">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -40,7 +40,7 @@
 
         <Button x:Name="CloseButton" Content="Button" HorizontalAlignment="Left" Margin="761,10,0,0" VerticalAlignment="Top" Width="22" Click="Button_Close" Height="22" Opacity="0"/>
 
-        <Button x:Name="discord" Click="Button_Discord" Margin="10,387,620,10">
+        <Button x:Name="discord" Click="Button_Discord" Margin="10,401,620,-4">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -51,7 +51,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="forum" Click="Button_Forum" Margin="10,334,620,63">
+        <Button x:Name="forum" Click="Button_Forum" Margin="10,348,620,49">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -62,7 +62,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="gp" Click="Button_GP" Margin="10,281,620,116">
+        <Button x:Name="gp" Click="Button_GP" Margin="10,295,620,102">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -73,7 +73,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="close" Margin="745,10,10,397" Click="Button_Close">
+        <Button x:Name="close" Margin="747,-4,8,411" Click="Button_Close">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -86,30 +86,38 @@
         </Button>
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="416,343,0,0" VerticalAlignment="Top" Width="243" Height="44"/>
 
-        <Image HorizontalAlignment="Left" Height="58" Margin="322,10,0,0" VerticalAlignment="Top" Width="242" Source="images/final_countdown.png"/>
-        <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged" Margin="211,73,141,21" Background="{x:Null}" BorderThickness="0"  Height="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+        <Image HorizontalAlignment="Left" Height="58" Margin="322,-2,0,0" VerticalAlignment="Top" Width="242" Source="images/final_countdown.png"/>
+        <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged" Margin="211,53,141,10" Background="{x:Null}" BorderThickness="0"  Height="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="448" MinHeight="90" Background="#3F000000">
+                    <Grid Width="448" MinHeight="90" Background="#62000000" ForceCursor="False">
                         <Grid.Resources>
                             <Style TargetType="Border" >
                                 <Setter Property="Padding" Value="5,5,5,5" />
                             </Style>
                         </Grid.Resources>
+
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="150"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
                         <Border Grid.Column="0">
-                            <Grid VerticalAlignment="Center" Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
-                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="150" />
+                            <Grid Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
+                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="145" />
                             </Grid>
                         </Border>
                         <Border Grid.Column="1">
-                            <StackPanel>
-                                <TextBlock Text="{Binding DateTime}" FontSize="12" FontFamily="{StaticResource FontHemiHead}" FontStyle="Normal" FontWeight="Normal" Foreground="White" VerticalAlignment="Bottom" TextAlignment="Left"/>
-                                <TextBlock Text="{Binding Title}" FontSize="18.5" FontFamily="{StaticResource FontHemiHead}" FontStyle="Normal" FontWeight="Normal" Foreground="White" TextWrapping="WrapWithOverflow"/>
+                            <StackPanel Background="#1F000000">
+                                <TextBlock Text="{Binding DateTime}" FontSize="14" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Right" Margin="0,0,12,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
+                                    <TextBlock.Background>
+                                        <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
+                                            <GradientStop Color="#00000000" Offset="0"/>
+                                            <GradientStop Color="#67000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Background>
+                                </TextBlock>
+                                <TextBlock Text="{Binding Title}" FontSize="17.5" FontFamily="Tahoma" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
                             </StackPanel>
                         </Border>
                     </Grid>
