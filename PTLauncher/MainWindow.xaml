@@ -92,14 +92,14 @@
                 <DataTemplate>
                     <Grid Width="448" MinHeight="90" Background="#62000000" ForceCursor="False">
                         <Grid.Resources>
-                            <Style TargetType="Border" >
+                            <Style TargetType="Border">
                                 <Setter Property="Padding" Value="5,5,5,5" />
                             </Style>
                         </Grid.Resources>
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="150"></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="298"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
                         <Border Grid.Column="0">
@@ -109,11 +109,11 @@
                         </Border>
                         <Border Grid.Column="1">
                             <StackPanel Background="#1F000000">
-                                <TextBlock Text="{Binding DateTime}" FontSize="14" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Right" Margin="0,0,12,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
+                                <TextBlock Text="{Binding DateTime}" FontSize="14" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,12,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
                                     <TextBlock.Background>
                                         <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
                                             <GradientStop Color="#00000000" Offset="0"/>
-                                            <GradientStop Color="#67000000" Offset="1"/>
+                                            <GradientStop Color="#57000000" Offset="1"/>
                                         </LinearGradientBrush>
                                     </TextBlock.Background>
                                 </TextBlock>
