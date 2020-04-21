@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PTLauncher"
              StartupUri="MainWindow.xaml">
+
     <Application.Resources>
-         
+        <FontFamily x:Key="FontHemiHead" >pack://application:,,,./fonts/#Hemi Head 426</FontFamily>
     </Application.Resources>
 </Application>
