@@ -16,10 +16,6 @@ namespace PTLauncher
 
         private IList<Place> places = new List<Place>();
         public IList<Place> Places { get { return places; } set { places = value; } }
-
-        private IList<GameNews> gameNews = new List<GameNews>();
-        public IList<GameNews> GameNews { get { return gameNews; } set { gameNews = value; } }
-
         public Place SelectedPlace
         {
             get { return selectedPlace; }
@@ -50,7 +46,6 @@ namespace PTLauncher
         public MainVM()
         {
             PopulateComoboBoxes();
-            ObtainGameNews();
         }
 
         /// <summary>
@@ -68,13 +63,6 @@ namespace PTLauncher
             //This is the case for SelectedValue and selectedValuePath
 
         }
-
-        private void ObtainGameNews()
-        {
-            GameNews.Obtainer obtainer = new GameNews.Obtainer();
-            GameNews = obtainer.GameNews;
-        }
-
     }
 
     public class Place
@@ -84,7 +72,7 @@ namespace PTLauncher
         public string City { get; set; }
         public override string ToString()
         {
-            return Country;   
+            return Country;
         }
     }
 
