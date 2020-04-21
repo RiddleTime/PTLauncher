@@ -38,6 +38,9 @@ namespace PTLauncher
             bool result = ProjectTorque.Start();
             Debug.WriteLine(ProjectTorque.StartInfo.FileName);
             Debug.WriteLine(ProjectTorque.StartInfo.Arguments);
+
+            Debug.WriteLine("Exit Launcher, Project Torque started.");
+            Environment.Exit(0);
         }
 
         private void Button_Discord(object sender, RoutedEventArgs e)
