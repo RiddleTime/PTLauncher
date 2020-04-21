@@ -117,7 +117,7 @@
                                         </LinearGradientBrush>
                                     </TextBlock.Background>
                                 </TextBlock>
-                                <TextBlock Text="{Binding Title}" FontSize="17.5" FontFamily="Tahoma" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
+                                <TextBlock Text="{Binding Title}" FontSize="22.5"  FontFamily="{StaticResource FontHemiHead}" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
                             </StackPanel>
                         </Border>
                     </Grid>
