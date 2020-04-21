@@ -5,20 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         
         xmlns:local="clr-namespace:PTLauncher"
+        xmlns:news="clr-namespace:PTLauncher.News"
         
-        xmlns:i="clr-namespace:Lada.Windows.Input;assembly=WpfMouseWheelLib"
+        xmlns:i="clr-namespace:Lada.Windows.Input;assembly=WpfMouseWheelLib" xmlns:news1="clr-namespace:PTLauncher.src.controls.news"
         i:MouseWheel.Enhanced="True"
         i:MouseWheel.ScrollMode="Physical"
         
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="MainWindow" Width="800" Height="480"  ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None">
-
-    <Window.Resources>
-        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></local:BoolToVisibilityConverter>
-    </Window.Resources>
-
-
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
         <ComboBox HorizontalAlignment="Left" Margin="678,307,0,0" VerticalAlignment="Top" Width="112" ItemsSource="{Binding Places}" SelectedItem="{Binding SelectedPlace}" DisplayMemberPath="City" SelectedIndex="1"  />
 
@@ -26,7 +21,7 @@
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
-                        <Image Source="images/Play.png" 
+                        <Image Source="../images/Play.png" 
                                Width="Auto" 
                                Height="Auto" Margin="-17,-12,-36,-36"/>
                     </Border>
@@ -35,8 +30,7 @@
         </Button>
 
 
-
-        <Image HorizontalAlignment="Left" Height="123" Margin="10,10,0,0" VerticalAlignment="Top" Width="191" Source="images/PTsplash.png"/>
+        <Image HorizontalAlignment="Left" Height="123" Margin="10,10,0,0" VerticalAlignment="Top" Width="191" Source="../images/PTsplash.png"/>
 
         <Button x:Name="CloseButton" Content="Button" HorizontalAlignment="Left" Margin="761,10,0,0" VerticalAlignment="Top" Width="22" Click="Button_Close" Height="22" Opacity="0"/>
 
@@ -44,7 +38,7 @@
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
-                        <Image Source="images/DiscordLink.png" 
+                        <Image Source="../images/DiscordLink.png" 
                                Width="Auto" 
                                Height="64" Margin="-51,0,-75,0"/>
                     </Border>
@@ -55,7 +49,7 @@
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
-                        <Image Source="images/ForumLink.png" 
+                        <Image Source="../images/ForumLink.png" 
                                Width="Auto" 
                                Height="64" Margin="-51,0,-75,0"/>
                     </Border>
@@ -66,7 +60,7 @@
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
-                        <Image Source="images/GPLink.png" 
+                        <Image Source="../images/GPLink.png" 
                                Width="Auto" 
                                Height="64" Margin="-51,0,-75,0"/>
                     </Border>
@@ -77,7 +71,7 @@
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
-                        <Image Source="images/exit.png" 
+                        <Image Source="../images/exit.png" 
                                Width="48" 
                                Height="48" Margin="0,0,0,0"/>
                     </Border>
@@ -86,29 +80,42 @@
         </Button>
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="416,343,0,0" VerticalAlignment="Top" Width="243" Height="44"/>
 
-        <Image HorizontalAlignment="Left" Height="58" Margin="322,-2,0,0" VerticalAlignment="Top" Width="242" Source="images/final_countdown.png"/>
-        <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged" Margin="211,53,141,10" Background="{x:Null}" BorderThickness="0"  Height="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+        <Image HorizontalAlignment="Left" Height="58" Margin="322,-2,0,0" VerticalAlignment="Top" Width="242" Source="../images/final_countdown.png"/>
+        <UserControl ></UserControl>
+
+        <news1:NewsControl HorizontalAlignment="Left" Margin="228,56,0,0" VerticalAlignment="Top" Width="450" Height="414"></news1:NewsControl>
+       <!-- <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged" Margin="211,53,141,10" Background="{x:Null}" BorderThickness="0"  Height="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="448" MinHeight="90" Background="#62000000" ForceCursor="False">
+                    <Grid Width="450" MinHeight="90" Background="#62000000" ForceCursor="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="300"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
                         <Grid.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="Padding" Value="5,5,5,5" />
                             </Style>
                         </Grid.Resources>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"></ColumnDefinition>
-                            <ColumnDefinition Width="298"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-
+                        
                         <Border Grid.Column="0">
                             <Grid Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
-                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="145" />
+                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="146" />
                             </Grid>
                         </Border>
-                        <Border Grid.Column="1">
-                            <StackPanel Background="#1F000000">
+                        <Border Grid.Column="1" Cursor="Hand">
+                            <StackPanel>
+                                <StackPanel.Style>
+                                    <Style>
+                                        <Setter Property="Border.Background" Value="#1F000000"></Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                                <Setter Property="Border.Background" Value="#6F000000"></Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </StackPanel.Style>
+
                                 <TextBlock Text="{Binding DateTime}" FontSize="14" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,12,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
                                     <TextBlock.Background>
                                         <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
@@ -124,10 +131,10 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
+-->
     </Grid>
     <Window.Background>
-        <ImageBrush ImageSource="images/gui_maindesktop03.png" />
+        <ImageBrush ImageSource="../images/gui_maindesktop03.png" />
     </Window.Background>
 
 

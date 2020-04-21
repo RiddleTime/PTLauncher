@@ -139,7 +139,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="src\controls\news\NewsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -147,10 +151,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BoolToVisibilityConverter.cs" />
-    <Compile Include="News.cs" />
-    <Compile Include="MainVM.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="src\controls\news\NewsControl.xaml.cs">
+      <DependentUpon>NewsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="src\controls\news\News.cs" />
+    <Compile Include="src\MainVM.cs" />
+    <Compile Include="src\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
