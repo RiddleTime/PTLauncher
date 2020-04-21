@@ -108,8 +108,8 @@
                         </Border>
                         <Border Grid.Column="1">
                             <StackPanel>
-                                <TextBlock Text="{Binding DateTime}" FontSize="11" FontFamily="Arial" FontStyle="Italic"  FontWeight="Light" Foreground="White" VerticalAlignment="Bottom" TextAlignment="Left"/>
-                                <TextBlock Text="{Binding Title}" FontSize="19" FontFamily="Arial" FontWeight="Bold" FontStyle="Italic" Foreground="White" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="{Binding DateTime}" FontSize="12" FontFamily="Hemi Head 426" FontStyle="Normal"  FontWeight="Normal" Foreground="White" VerticalAlignment="Bottom" TextAlignment="Left"/>
+                                <TextBlock Text="{Binding Title}" FontSize="18.5" FontFamily="Hemi Head 426"  FontStyle="Normal"  FontWeight="Normal"  Foreground="White" TextWrapping="WrapWithOverflow"/>
                             </StackPanel>
                         </Border>
                     </Grid>
