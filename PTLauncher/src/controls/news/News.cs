@@ -67,7 +67,7 @@ namespace PTLauncher.News
 
                 if (image == string.Empty)
                 {
-                    image = "../images/PTsplash.png";
+                    image = "../../../images/PTsplash.png";
                 }
 
                 return image;

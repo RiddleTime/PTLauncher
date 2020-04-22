@@ -14,6 +14,10 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="MainWindow" Width="800" Height="480"  ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="../images/gui_maindesktop03.png" />
+    </Window.Background>
+
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
         <ComboBox HorizontalAlignment="Left" Margin="678,307,0,0" VerticalAlignment="Top" Width="112" ItemsSource="{Binding Places}" SelectedItem="{Binding SelectedPlace}" DisplayMemberPath="City" SelectedIndex="1"  />
 
@@ -81,63 +85,8 @@
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="416,343,0,0" VerticalAlignment="Top" Width="243" Height="44"/>
 
         <Image HorizontalAlignment="Left" Height="58" Margin="322,-2,0,0" VerticalAlignment="Top" Width="242" Source="../images/final_countdown.png"/>
-        <UserControl ></UserControl>
-
-        <news1:NewsControl HorizontalAlignment="Left" Margin="228,56,0,0" VerticalAlignment="Top" Width="450" Height="414"></news1:NewsControl>
-       <!-- <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged" Margin="211,53,141,10" Background="{x:Null}" BorderThickness="0"  Height="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid Width="450" MinHeight="90" Background="#62000000" ForceCursor="False">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"></ColumnDefinition>
-                            <ColumnDefinition Width="300"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Grid.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="Padding" Value="5,5,5,5" />
-                            </Style>
-                        </Grid.Resources>
-                        
-                        <Border Grid.Column="0">
-                            <Grid Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
-                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="146" />
-                            </Grid>
-                        </Border>
-                        <Border Grid.Column="1" Cursor="Hand">
-                            <StackPanel>
-                                <StackPanel.Style>
-                                    <Style>
-                                        <Setter Property="Border.Background" Value="#1F000000"></Setter>
-                                        <Style.Triggers>
-                                            <Trigger Property="Border.IsMouseOver" Value="True">
-                                                <Setter Property="Border.Background" Value="#6F000000"></Setter>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </StackPanel.Style>
-
-                                <TextBlock Text="{Binding DateTime}" FontSize="14" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,12,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
-                                    <TextBlock.Background>
-                                        <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
-                                            <GradientStop Color="#00000000" Offset="0"/>
-                                            <GradientStop Color="#57000000" Offset="1"/>
-                                        </LinearGradientBrush>
-                                    </TextBlock.Background>
-                                </TextBlock>
-                                <TextBlock Text="{Binding Title}" FontSize="22.5"  FontFamily="{StaticResource FontHemiHead}" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
-                            </StackPanel>
-                        </Border>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
--->
+        <news1:NewsControl HorizontalAlignment="Left" Margin="206,56,0,0" VerticalAlignment="Top" Width="472" Height="414"></news1:NewsControl>
     </Grid>
-    <Window.Background>
-        <ImageBrush ImageSource="../images/gui_maindesktop03.png" />
-    </Window.Background>
-
-
 
 
 </Window>

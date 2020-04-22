@@ -28,6 +28,7 @@ namespace PTLauncher.src.controls.news
         public NewsControl()
         {
             InitializeComponent();
+            DataContext = this;
             ObtainGameNews();
         }
         private void ObtainGameNews()
