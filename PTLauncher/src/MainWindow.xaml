@@ -21,7 +21,7 @@
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
         <ComboBox HorizontalAlignment="Left" Margin="678,307,0,0" VerticalAlignment="Top" Width="112" ItemsSource="{Binding Places}" SelectedItem="{Binding SelectedPlace}" DisplayMemberPath="City" SelectedIndex="1"  />
 
-        <Button x:Name="play" Margin="678,350,17,5" Click="Button_Play" Panel.ZIndex="1">
+        <Button x:Name="play" Margin="678,350,17,5" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -71,7 +71,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="close" Margin="747,-4,8,411" Click="Button_Close">
+        <Button x:Name="close" Margin="747,-4,8,411" Click="Button_Close" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
