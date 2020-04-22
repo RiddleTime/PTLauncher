@@ -140,8 +140,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="src\controls\language\LanguageControl.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="src\controls\news\NewsControl.xaml">
       <SubType>Designer</SubType>

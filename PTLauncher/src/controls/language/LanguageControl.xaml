@@ -3,10 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:PTLauncher.src.controls.language"
+             
+             xmlns:ptlauncher="clr-namespace:PTLauncher"
+             
              mc:Ignorable="d" 
+             Width="auto"
+             Height="auto"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <UserControl.Resources>
+        <ptlauncher:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></ptlauncher:BoolToVisibilityConverter>
+    </UserControl.Resources>
+    
+    
+    <TextBlock Text="Here we will choose language "></TextBlock>
 </UserControl>

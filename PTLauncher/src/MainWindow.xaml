@@ -6,6 +6,7 @@
         
         xmlns:local="clr-namespace:PTLauncher"
         xmlns:news="clr-namespace:PTLauncher.News"
+        xmlns:languageControl="clr-namespace:PTLauncher.src.controls.language"
         
         xmlns:i="clr-namespace:Lada.Windows.Input;assembly=WpfMouseWheelLib" xmlns:news1="clr-namespace:PTLauncher.src.controls.news"
         i:MouseWheel.Enhanced="True"
@@ -19,7 +20,16 @@
     </Window.Background>
 
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
-        <ComboBox HorizontalAlignment="Left" Margin="678,307,0,0" VerticalAlignment="Top" Width="112" ItemsSource="{Binding Places}" SelectedItem="{Binding SelectedPlace}" DisplayMemberPath="City" SelectedIndex="1"  />
+        <languageControl:LanguageControl Margin="687,298,11,155" RenderTransformOrigin="0.5,0.5">
+            <languageControl:LanguageControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.127"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.498"/>
+                </TransformGroup>
+            </languageControl:LanguageControl.RenderTransform>
+        </languageControl:LanguageControl>
 
         <Button x:Name="play" Margin="678,350,17,5" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand">
             <Button.Template>

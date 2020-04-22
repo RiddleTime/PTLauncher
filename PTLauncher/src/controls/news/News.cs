@@ -67,7 +67,7 @@ namespace PTLauncher.News
 
                 if (image == string.Empty)
                 {
-                    image = "../../../images/PTsplash.png";
+                    image = "../../../images/PTsplash.png";  // TODO: let's fix this, this make something unstable in future. So it needs to be 'dynamic'! check out resource stream: https://stackoverflow.com/a/1192076
                 }
 
                 return image;
