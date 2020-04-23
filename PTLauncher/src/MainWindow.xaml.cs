@@ -16,6 +16,7 @@ namespace PTLauncher
         public MainWindow()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.DataContext = new MainVM();
         }
 
