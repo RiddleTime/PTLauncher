@@ -9,12 +9,21 @@
              mc:Ignorable="d" 
              Width="auto"
              Height="auto"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="150" d:DesignWidth="200">
     <UserControl.Resources>
         <ptlauncher:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></ptlauncher:BoolToVisibilityConverter>
     </UserControl.Resources>
     <StackPanel>
-        <TextBlock Text="Language Options" Foreground="White"></TextBlock>
-        <TextBlock Text="Under construction" Foreground="White"></TextBlock>
+        <TextBlock Height="22" Text="Select Language" FontSize="20" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Center" ></TextBlock>
+        <ComboBox x:Name="ComboBoxLanguages" ItemsSource="{Binding Languages}"
+                  Height="25" FontSize="19.5" FontFamily="{StaticResource FontHemiHead}" HorizontalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" Foreground="Black"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
     </StackPanel>
 </UserControl>

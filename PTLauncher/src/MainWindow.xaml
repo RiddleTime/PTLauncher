@@ -14,24 +14,22 @@
         
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Width="800" Height="480"  ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None">
+        Title="MainWindow" Width="900" Height="480"  ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None">
     <Window.Background>
         <ImageBrush ImageSource="../images/gui_maindesktop03.png" />
     </Window.Background>
 
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
-        <languageControl:LanguageControl Margin="687,298,11,138" RenderTransformOrigin="0.5,0.5">
+        <languageControl:LanguageControl Margin="726,74,19,312" RenderTransformOrigin="0.5,0.5">
             <languageControl:LanguageControl.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleX="-0.127"/>
                     <RotateTransform/>
-                    <TranslateTransform X="-0.498"/>
                 </TransformGroup>
             </languageControl:LanguageControl.RenderTransform>
         </languageControl:LanguageControl>
 
-        <Button x:Name="play" Margin="678,350,17,5" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand">
+        <Button x:Name="play" Margin="742,333,32,22" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -44,11 +42,11 @@
         </Button>
 
 
-        <Image HorizontalAlignment="Left" Height="123" Margin="10,10,0,0" VerticalAlignment="Top" Width="191" Source="../images/PTsplash.png"/>
+        <Image HorizontalAlignment="Left" Height="123" Margin="5,4,0,0" VerticalAlignment="Top" Width="191" Source="../images/PTsplash.png"/>
 
         <Button x:Name="CloseButton" Content="Button" HorizontalAlignment="Left" Margin="761,10,0,0" VerticalAlignment="Top" Width="22" Click="Button_Close" Height="22" Opacity="0"/>
 
-        <Button x:Name="discord" Click="Button_Discord" Margin="10,401,620,-4" Cursor="Hand">
+        <Button x:Name="discord" Click="Button_Discord" Margin="-40,397,670,0" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -59,7 +57,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="forum" Click="Button_Forum" Margin="10,348,620,49" Cursor="Hand">
+        <Button x:Name="forum" Click="Button_Forum" Margin="-40,344,670,53" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -70,7 +68,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="gp" Click="Button_GP" Margin="10,295,620,102" Cursor="Hand">
+        <Button x:Name="gp" Click="Button_GP" Margin="-40,291,670,106" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -81,7 +79,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="close" Margin="747,-4,8,411" Click="Button_Close" Cursor="Hand">
+        <Button x:Name="close" Margin="821,-4,8,411" Click="Button_Close" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -94,8 +92,8 @@
         </Button>
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="416,343,0,0" VerticalAlignment="Top" Width="243" Height="44"/>
 
-        <Image HorizontalAlignment="Left" Height="58" Margin="322,-2,0,0" VerticalAlignment="Top" Width="242" Source="../images/final_countdown.png"/>
-        <news1:NewsControl HorizontalAlignment="Left" Margin="206,56,0,0" VerticalAlignment="Top" Width="472" Height="414"></news1:NewsControl>
+        <Image HorizontalAlignment="Left" Height="58" Margin="336,-4,0,0" VerticalAlignment="Top" Width="242" Source="../images/final_countdown.png"/>
+        <news1:NewsControl HorizontalAlignment="Left" Margin="206,56,0,0" VerticalAlignment="Top" Width="515" Height="414"></news1:NewsControl>
 
 
 
