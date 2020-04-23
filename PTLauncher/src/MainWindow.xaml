@@ -20,16 +20,10 @@
     </Window.Background>
 
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
-        <languageControl:LanguageControl Margin="726,74,19,312" RenderTransformOrigin="0.5,0.5">
-            <languageControl:LanguageControl.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <RotateTransform/>
-                </TransformGroup>
-            </languageControl:LanguageControl.RenderTransform>
+        <languageControl:LanguageControl Margin="710,74,10,256" RenderTransformOrigin="0.5,0.5">
         </languageControl:LanguageControl>
 
-        <Button x:Name="play" Margin="742,333,32,22" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand">
+        <Button x:Name="play" Margin="740,333,34,22" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -93,7 +87,7 @@
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="416,343,0,0" VerticalAlignment="Top" Width="243" Height="44"/>
 
         <Image HorizontalAlignment="Left" Height="58" Margin="336,-4,0,0" VerticalAlignment="Top" Width="242" Source="../images/final_countdown.png"/>
-        <news1:NewsControl HorizontalAlignment="Left" Margin="206,56,0,0" VerticalAlignment="Top" Width="515" Height="414"></news1:NewsControl>
+        <news1:NewsControl HorizontalAlignment="Left" Margin="206,56,0,0" VerticalAlignment="Top" Width="499" Height="414"></news1:NewsControl>
 
 
 
