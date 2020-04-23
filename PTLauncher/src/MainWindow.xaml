@@ -20,7 +20,7 @@
     </Window.Background>
 
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
-        <languageControl:LanguageControl Margin="687,298,11,155" RenderTransformOrigin="0.5,0.5">
+        <languageControl:LanguageControl Margin="687,298,11,138" RenderTransformOrigin="0.5,0.5">
             <languageControl:LanguageControl.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -13,7 +13,8 @@
     <UserControl.Resources>
         <ptlauncher:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></ptlauncher:BoolToVisibilityConverter>
     </UserControl.Resources>
-    
-    
-    <TextBlock Text="Here we will choose language "></TextBlock>
+    <StackPanel>
+        <TextBlock Text="Language Options" Foreground="White"></TextBlock>
+        <TextBlock Text="Under construction" Foreground="White"></TextBlock>
+    </StackPanel>
 </UserControl>
