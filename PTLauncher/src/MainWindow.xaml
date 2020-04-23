@@ -14,7 +14,7 @@
         
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Width="900" Height="480"  ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None">
+        Title="Project Torque Launcher" Width="900" Height="480"  ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None" Icon="/PTLauncher;component/images/PTsplash.png">
     <Window.Background>
         <ImageBrush ImageSource="../images/gui_maindesktop03.png" />
     </Window.Background>
