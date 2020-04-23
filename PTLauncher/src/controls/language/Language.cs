@@ -6,20 +6,23 @@ namespace PTLauncher.Language
 {
     public class GameLanguage
     {
-        public string Name { get; set; }
         public string Parameter { get; set; }
+        public string Name { get; set; }
+        public string LocalizedName { get; set; }
 
         public static IList<GameLanguage> Languages = new List<GameLanguage>() {
-            new GameLanguage() { Name = "Dutch",        Parameter = "nl"},
-            new GameLanguage() { Name = "English",      Parameter = "en"},
-            new GameLanguage() { Name = "Estonian",     Parameter = "et"},
-            new GameLanguage() { Name = "German",       Parameter = "de"},
-            new GameLanguage() { Name = "Hungarian",    Parameter = "hu"},
-            new GameLanguage() { Name = "Italian",      Parameter = "it"},
-            new GameLanguage() { Name = "Polish",       Parameter = "pl"},
-            new GameLanguage() { Name = "Portuguese",   Parameter = "pt"},
-            new GameLanguage() { Name = "Spanish",      Parameter = "es"},
-            new GameLanguage() { Name = "Turkish",      Parameter = "tr"},
+            new GameLanguage() { Name = "Dutch",        Parameter = "nl", LocalizedName = "Nederlands"},
+            new GameLanguage() { Name = "English",      Parameter = "en", LocalizedName = "English"},
+            new GameLanguage() { Name = "Estonian",     Parameter = "et", LocalizedName = "Eesti"},
+            new GameLanguage() { Name = "French",       Parameter = "et", LocalizedName = "Français"},
+            new GameLanguage() { Name = "German",       Parameter = "de", LocalizedName = "Deutsch"},
+            new GameLanguage() { Name = "Hungarian",    Parameter = "hu", LocalizedName = "Magyar"},
+            new GameLanguage() { Name = "Italian",      Parameter = "it", LocalizedName = "Italiano"},
+            new GameLanguage() { Name = "Polish",       Parameter = "pl", LocalizedName = "Polskie"},
+            new GameLanguage() { Name = "Portuguese",   Parameter = "pt", LocalizedName = "Português"},
+            new GameLanguage() { Name = "Russian",      Parameter = "ru", LocalizedName = "русский"},
+            new GameLanguage() { Name = "Spanish",      Parameter = "es", LocalizedName = "Español"},
+            new GameLanguage() { Name = "Turkish",      Parameter = "tr", LocalizedName = "Türk"},
         };
     }
 
