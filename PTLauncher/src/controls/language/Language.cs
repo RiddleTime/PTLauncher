@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace PTLauncher.Language
 {
@@ -20,14 +19,17 @@ namespace PTLauncher.Language
             new GameLanguage() { Name = "Italian",      Parameter = "it", LocalizedName = "Italiano"},
             new GameLanguage() { Name = "Polish",       Parameter = "pl", LocalizedName = "Polskie"},
             new GameLanguage() { Name = "Portuguese",   Parameter = "pt", LocalizedName = "Português"},
-            new GameLanguage() { Name = "Russian",      Parameter = "ru", LocalizedName = "русский"},
+            new GameLanguage() { Name = "Russian",      Parameter = "ru", LocalizedName = "Pусский"},
             new GameLanguage() { Name = "Spanish",      Parameter = "es", LocalizedName = "Español"},
             new GameLanguage() { Name = "Turkish",      Parameter = "tr", LocalizedName = "Türk"},
         };
     }
 
-    public class LanguagePersistance
+    public static class LanguagePersistance
     {
-
+        public static GameLanguage GetDefaultLanguag()
+        {
+            return GameLanguage.Languages.Where(language => language.Parameter == "en").FirstOrDefault();
+        }
     }
 }
