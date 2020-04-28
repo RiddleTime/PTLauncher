@@ -15,10 +15,11 @@
     </UserControl.Resources>
 
     <StackPanel>
+         <!-- Header: 'News' -->
         <Grid Margin="5,0">
             <Grid.Background>
-                <RadialGradientBrush SpreadMethod="Pad" Center="0.5, 0.5" >
-                    <GradientStop Color="#97000000" Offset="0.5" />
+                <RadialGradientBrush SpreadMethod="Pad" Center="0.5, 0.55" >
+                    <GradientStop Color="#972F0F00" Offset="0.5" />
                     <GradientStop Color="#00000000" Offset="0.9" />
                 </RadialGradientBrush>
             </Grid.Background>
@@ -28,6 +29,7 @@
 
         <Grid Margin="0,1"></Grid>
         
+        <!-- News Scroller (could make new control ?? ) -->
         <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged"  Background="{x:Null}" BorderThickness="0"  Height="443" Width="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
             <ListBox.ItemContainerStyle>
                 <Style TargetType="{x:Type ListBoxItem}">
@@ -90,12 +92,15 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid x:Name="mainGrid" MinHeight="90" ForceCursor="False" Cursor="Hand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"></ColumnDefinition>
+                            <ColumnDefinition Width="315"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
                         <Grid.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="Padding" Value="5,5,5,5" />
                             </Style>
                         </Grid.Resources>
-
                         <Grid.Style>
                             <Style>
                                 <Setter Property="Grid.Background" Value="#6F000000"></Setter>
@@ -107,18 +112,16 @@
                             </Style>
                         </Grid.Style>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="140"></ColumnDefinition>
-                            <ColumnDefinition Width="315"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-
-
+                        
+                        <!--Show Image-->
                         <Border Grid.Column="0">
                             <Grid Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
                                 <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="146" />
                             </Grid>
                         </Border>
 
+                        
+                        <!--Show date and title-->
                         <Border Grid.Column="1" >
                             <StackPanel>
                                 <TextBlock Text="{Binding DateTime}" FontSize="14.2" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,2,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >

@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         
         xmlns:local="clr-namespace:PTLauncher"
-        xmlns:news="clr-namespace:PTLauncher.News"
+        xmlns:news="clr-namespace:PTLauncher.src.controls.news"
         xmlns:languageControl="clr-namespace:PTLauncher.src.controls.language"
         
-        xmlns:i="clr-namespace:Lada.Windows.Input;assembly=WpfMouseWheelLib" xmlns:news1="clr-namespace:PTLauncher.src.controls.news"
+        xmlns:i="clr-namespace:Lada.Windows.Input;assembly=WpfMouseWheelLib" 
         i:MouseWheel.Enhanced="True"
         i:MouseWheel.ScrollMode="Physical"
         
@@ -27,7 +27,7 @@
             <ColumnDefinition Width="159*"/>
         </Grid.ColumnDefinitions>
 
-        <languageControl:LanguageControl Margin="2,4,4,335" Grid.Column="3"/>
+        <languageControl:LanguageControl Margin="2,7,4,338" Grid.Column="3"/>
 
         <Button x:Name="play" Margin="13,343,18,12" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand" Grid.Column="3">
             <Button.Template>
@@ -78,7 +78,9 @@
             </Button.Template>
         </Button>
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="34,343,0,0" VerticalAlignment="Top" Width="243" Height="44" Grid.Column="2"/>
-        <news1:NewsControl HorizontalAlignment="Left" Margin="7,4,0,0" VerticalAlignment="Top" Width="465" Height="475" Grid.ColumnSpan="2" Grid.Column="1"></news1:NewsControl>
+        
+        
+        <news:NewsControl HorizontalAlignment="Left" Margin="7,4,0,0" VerticalAlignment="Top" Width="465" Height="475" Grid.ColumnSpan="2" Grid.Column="1"></news:NewsControl>
 
 
 

@@ -26,7 +26,7 @@ namespace PTLauncher.src.controls.news
             GameNews = obtainer.GameNews;
         }
 
-        private void ListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
