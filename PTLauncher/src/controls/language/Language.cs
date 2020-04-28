@@ -19,7 +19,7 @@ namespace PTLauncher.Language
             new GameLanguage() { Name = "Italian",      Parameter = "it", LocalizedName = "Italiano"},
             new GameLanguage() { Name = "Polish",       Parameter = "pl", LocalizedName = "Polskie"},
             new GameLanguage() { Name = "Portuguese",   Parameter = "pt", LocalizedName = "Português"},
-            new GameLanguage() { Name = "Russian",      Parameter = "ru", LocalizedName = "Pусский"},
+            new GameLanguage() { Name = "Russian",      Parameter = "ru", LocalizedName = "Русский"},
             new GameLanguage() { Name = "Spanish",      Parameter = "es", LocalizedName = "Español"},
             new GameLanguage() { Name = "Turkish",      Parameter = "tr", LocalizedName = "Türk"},
         };
@@ -31,5 +31,8 @@ namespace PTLauncher.Language
         {
             return GameLanguage.Languages.Where(language => language.Parameter == "en").FirstOrDefault();
         }
+
+
+       
     }
 }
