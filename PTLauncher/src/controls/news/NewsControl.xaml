@@ -9,119 +9,134 @@
              mc:Ignorable="d" 
              Width="auto"
              Height="auto"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="475" d:DesignWidth="800">
     <UserControl.Resources>
         <ptlauncher:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></ptlauncher:BoolToVisibilityConverter>
     </UserControl.Resources>
 
-    <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged"  Background="{x:Null}" BorderThickness="0"  Height="auto" Width="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+    <StackPanel>
+        <Grid Margin="5,0">
+            <Grid.Background>
+                <RadialGradientBrush SpreadMethod="Pad" Center="0.5, 0.5" >
+                    <GradientStop Color="#97000000" Offset="0.5" />
+                    <GradientStop Color="#00000000" Offset="0.9" />
+                </RadialGradientBrush>
+            </Grid.Background>
+            
+            <TextBlock Height="30" Text="News" FontSize="30" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Center" Margin="0,0,5,0" />
+        </Grid>
 
-        <ListBox.ItemContainerStyle>
-            <Style TargetType="{x:Type ListBoxItem}">
-                <Setter Property="BorderBrush" Value="Transparent"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="Background" Value="Transparent" />
-                <Setter Property="Foreground" Value="Transparent" />
-
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                            <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
-                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsSelected" Value="true">
-                                    <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
-                                    <Setter Property="Foreground" Value="Transparent"/>
-                                    <Setter Property="BorderBrush" Value="Transparent"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                </Trigger>
-                                <MultiTrigger>
-                                    <MultiTrigger.Conditions>
-                                        <Condition Property="IsSelected" Value="true"/>
-                                        <Condition Property="Selector.IsSelectionActive" Value="false"/>
-                                    </MultiTrigger.Conditions>
-                                    <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
-                                    <Setter Property="Foreground" Value="Transparent"/>
-                                    <Setter Property="BorderBrush" Value="Transparent"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                </MultiTrigger>
-                                <Trigger Property="IsEnabled" Value="false">
-                                    <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
-                                    <Setter Property="Foreground" Value="Transparent"/>
-                                    <Setter Property="BorderBrush" Value="Transparent"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-
-                <Style.Triggers>
-                    <Trigger Property="IsFocused" Value="True" >
-                        <Setter Property="Background" Value="Transparent" />
-                    </Trigger>
-                    <Trigger Property="IsSelected" Value="True" >
-                        <Setter Property="Background" Value="Transparent" />
-                        <Setter Property="Foreground" Value="Transparent" />
-                        <Setter Property="Selector.Foreground" Value="Transparent" />
-                        <Setter Property="Selector.Background" Value="Transparent" />
-                    </Trigger>
-                </Style.Triggers>
-                <Style.Resources>
-                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
-                </Style.Resources>
-            </Style>
-        </ListBox.ItemContainerStyle>
+        <Grid Margin="0,1"></Grid>
         
-        <ListBox.ItemTemplate>
-            <DataTemplate>
-                <Grid x:Name="mainGrid" MinHeight="90" ForceCursor="False" Cursor="Hand">
-                    <Grid.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="Padding" Value="5,5,5,5" />
-                        </Style>
-                    </Grid.Resources>
+        <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged"  Background="{x:Null}" BorderThickness="0"  Height="431" Width="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
 
-                    <Grid.Style>
-                        <Style>
-                            <Setter Property="Grid.Background" Value="#6F000000"></Setter>
-                            <Style.Triggers>
-                                <Trigger Property="Grid.IsMouseOver" Value="True">
-                                    <Setter Property="Grid.Background" Value="#8F000000"></Setter>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Grid.Style>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Foreground" Value="Transparent" />
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"></ColumnDefinition>
-                        <ColumnDefinition Width="340"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="true">
+                                        <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                        <Setter Property="Foreground" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </Trigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="true"/>
+                                            <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                        <Setter Property="Foreground" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </MultiTrigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                                        <Setter Property="Foreground" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsFocused" Value="True" >
+                            <Setter Property="Background" Value="Transparent" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True" >
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Transparent" />
+                            <Setter Property="Selector.Foreground" Value="Transparent" />
+                            <Setter Property="Selector.Background" Value="Transparent" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                    </Style.Resources>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid x:Name="mainGrid" MinHeight="90" ForceCursor="False" Cursor="Hand">
+                        <Grid.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="Padding" Value="5,5,5,5" />
+                            </Style>
+                        </Grid.Resources>
+
+                        <Grid.Style>
+                            <Style>
+                                <Setter Property="Grid.Background" Value="#6F000000"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="Grid.IsMouseOver" Value="True">
+                                        <Setter Property="Grid.Background" Value="#8F000000"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Grid.Style>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="356"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
 
 
-                    <Border Grid.Column="0">
-                        <Grid Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
-                            <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="146" />
-                        </Grid>
-                    </Border>
+                        <Border Grid.Column="0">
+                            <Grid Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
+                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="146" />
+                            </Grid>
+                        </Border>
 
-                    <Border Grid.Column="1" >
-                        <StackPanel>
-                            <TextBlock Text="{Binding DateTime}" FontSize="14" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,12,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
-                                <TextBlock.Background>
-                                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
-                                        <GradientStop Color="#00000000" Offset="0"/>
-                                        <GradientStop Color="#57000000" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </TextBlock.Background>
-                            </TextBlock>
+                        <Border Grid.Column="1" >
+                            <StackPanel>
+                                <TextBlock Text="{Binding DateTime}" FontSize="14.2" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,2,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
+                                    <TextBlock.Background>
+                                        <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
+                                            <GradientStop Color="#00000000" Offset="0"/>
+                                            <GradientStop Color="#57000000" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Background>
+                                </TextBlock>
 
-                            <TextBlock Text="{Binding Title}" FontSize="22.5"  FontFamily="{StaticResource FontHemiHead}" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
-                        </StackPanel>
-                    </Border>
-                </Grid>
-            </DataTemplate>
-        </ListBox.ItemTemplate>
-    </ListBox>
+                                <TextBlock Text="{Binding Title}" FontSize="22.5"  FontFamily="{StaticResource FontHemiHead}" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
 </UserControl>

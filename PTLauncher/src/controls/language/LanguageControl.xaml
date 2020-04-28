@@ -60,22 +60,24 @@
     </UserControl.Resources>
 
     <StackPanel>
-        <TextBlock Height="22" Text="Game Language" FontSize="20" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Center" >
-            <TextBlock.Background>
-                <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
+        <Grid Margin="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1, 1" StartPoint="0.1,0.1">
                     <GradientStop Color="#00000000" Offset="0"/>
-                    <GradientStop Color="#87000000" Offset="1"/>
+                    <GradientStop Color="#87000000" Offset="0.9"/>
                 </LinearGradientBrush>
-            </TextBlock.Background>
-        </TextBlock>
-
-        <ComboBox x:Name="ComboBoxLanguages" Height="25" FontSize="20" FontFamily="{StaticResource FontHemiHead}" HorizontalContentAlignment="Center" Cursor="Hand" Background="Transparent">
+            </Grid.Background>
+            <TextBlock Height="22" Text="Game Language" FontSize="20" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Right" Margin="0,0,3,0" >
+            </TextBlock>
+        </Grid>
+        
+        <ComboBox x:Name="ComboBoxLanguages" Height="26" FontSize="20" FontFamily="{StaticResource FontHemiHead}" HorizontalContentAlignment="Center" Cursor="Hand" Background="Transparent">
             <ComboBox.ItemTemplate >
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}" TextAlignment="Right" HorizontalAlignment="Right" FontSize="18"/>
+                        <TextBlock Text="{Binding Name}" TextAlignment="Right" HorizontalAlignment="Right" FontSize="18.5"/>
                         <TextBlock Text=" | " TextAlignment="Right" HorizontalAlignment="Right"/>
-                        <TextBlock Text="{Binding LocalizedName}" TextAlignment="Right" HorizontalAlignment="Right" FontSize="18"/>
+                        <TextBlock Text="{Binding LocalizedName}" TextAlignment="Right" HorizontalAlignment="Right" FontSize="18.5"/>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
