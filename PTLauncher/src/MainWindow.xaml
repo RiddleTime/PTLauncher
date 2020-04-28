@@ -21,21 +21,21 @@
 
     <Grid MouseLeftButtonDown="WindowMouseLeftButtonDown">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="187*"/>
-            <ColumnDefinition Width="214*"/>
-            <ColumnDefinition Width="361*"/>
-            <ColumnDefinition Width="176*"/>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="296*"/>
+            <ColumnDefinition Width="159*"/>
         </Grid.ColumnDefinitions>
 
-        <languageControl:LanguageControl Margin="10,10,10,335" Grid.Column="3"/>
+        <languageControl:LanguageControl Margin="2,4,4,335" Grid.Column="3"/>
 
-        <Button x:Name="play" Margin="2,329,29,26" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand" Grid.Column="3">
+        <Button x:Name="play" Margin="13,343,18,12" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand" Grid.Column="3">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
                         <Image Source="../images/Play.png" 
                                Width="Auto" 
-                               Height="Auto" Margin="-17,-12,-36,-36"/>
+                               Height="Auto" Margin="-30,-31,-36,-36"/>
                     </Border>
                 </ControlTemplate>
             </Button.Template>
@@ -78,7 +78,7 @@
             </Button.Template>
         </Button>
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="34,343,0,0" VerticalAlignment="Top" Width="243" Height="44" Grid.Column="2"/>
-        <news1:NewsControl HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top" Width="480" Height="475" Grid.ColumnSpan="2" Grid.Column="1"></news1:NewsControl>
+        <news1:NewsControl HorizontalAlignment="Left" Margin="7,4,0,0" VerticalAlignment="Top" Width="465" Height="475" Grid.ColumnSpan="2" Grid.Column="1"></news1:NewsControl>
 
 
 

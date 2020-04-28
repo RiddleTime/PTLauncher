@@ -28,8 +28,7 @@
 
         <Grid Margin="0,1"></Grid>
         
-        <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged"  Background="{x:Null}" BorderThickness="0"  Height="431" Width="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
-
+        <ListBox ItemsSource="{Binding GameNews}" SelectionChanged="ListBox_SelectionChanged"  Background="{x:Null}" BorderThickness="0"  Height="443" Width="auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
             <ListBox.ItemContainerStyle>
                 <Style TargetType="{x:Type ListBoxItem}">
                     <Setter Property="BorderBrush" Value="Transparent"/>
