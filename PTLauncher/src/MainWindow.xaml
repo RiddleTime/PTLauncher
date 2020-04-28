@@ -14,7 +14,7 @@
         
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Project Torque Launcher" Width="944" Height="524"  ScrollViewer.VerticalScrollBarVisibility="Disabled" Icon="/PTLauncher;component/images/PTsplash.png" WindowStyle="ThreeDBorderWindow">
+        Title="Project Torque Launcher" Width="800" Height="524"  ScrollViewer.VerticalScrollBarVisibility="Disabled" Icon="/PTLauncher;component/images/PTsplash.png" WindowStyle="ThreeDBorderWindow">
     <Window.Background>
         <ImageBrush ImageSource="../images/gui_maindesktop03.png" />
     </Window.Background>
@@ -27,8 +27,7 @@
             <ColumnDefinition Width="176*"/>
         </Grid.ColumnDefinitions>
 
-        <languageControl:LanguageControl Margin="338,10,10,335" Grid.Column="2" Grid.ColumnSpan="2">
-        </languageControl:LanguageControl>
+        <languageControl:LanguageControl Margin="10,10,10,335" Grid.Column="3"/>
 
         <Button x:Name="play" Margin="2,329,29,26" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand" Grid.Column="3">
             <Button.Template>
@@ -43,9 +42,9 @@
         </Button>
 
 
-        <Image HorizontalAlignment="Left" Height="123" Margin="5,4,0,0" VerticalAlignment="Top" Width="191" Source="../images/PTsplash.png" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="5,4,0,0" VerticalAlignment="Top" Width="153" Source="../images/PTsplash.png"/>
 
-        <Button x:Name="discord" Click="Button_Discord" Margin="-40,397,158,0" Cursor="Hand" Grid.ColumnSpan="2">
+        <Button x:Name="discord" Click="Button_Discord" Margin="-16,393,152,16" Cursor="Hand" Grid.ColumnSpan="2">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -56,7 +55,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="forum" Click="Button_Forum" Margin="-40,344,158,53" Cursor="Hand" Grid.ColumnSpan="2">
+        <Button x:Name="forum" Click="Button_Forum" Margin="-16,341,152,68" Cursor="Hand" Grid.ColumnSpan="2">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -67,7 +66,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="gp" Click="Button_GP" Margin="-40,291,158,106" Cursor="Hand" Grid.ColumnSpan="2">
+        <Button x:Name="gp" Click="Button_GP" Margin="-16,291,152,118" Cursor="Hand" Grid.ColumnSpan="2">
             <Button.Template>
                 <ControlTemplate>
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -79,7 +78,7 @@
             </Button.Template>
         </Button>
         <Label x:Name="textbox" HorizontalAlignment="Left" Margin="34,343,0,0" VerticalAlignment="Top" Width="243" Height="44" Grid.Column="2"/>
-        <news1:NewsControl HorizontalAlignment="Left" Margin="18.652,10,0,0" VerticalAlignment="Top" Width="516" Height="475" Grid.ColumnSpan="2" Grid.Column="1"></news1:NewsControl>
+        <news1:NewsControl HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top" Width="480" Height="475" Grid.ColumnSpan="2" Grid.Column="1"></news1:NewsControl>
 
 
 

@@ -67,7 +67,7 @@
                     <GradientStop Color="#87000000" Offset="0.9"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <TextBlock Height="22" Text="Game Language" FontSize="20" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Right" Margin="0,0,3,0" >
+            <TextBlock Height="22" Text="Language" FontSize="20" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Right" Margin="0,0,3,0" >
             </TextBlock>
         </Grid>
         
