@@ -20,7 +20,7 @@
             </TextBlock>
 
             <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button VerticalAlignment="Center" Click="Button_Click_1"  Cursor="Hand" ToolTip="Minimizes the PTLauncher">
+                <Button VerticalAlignment="Center" Click="Button_Click_1"  Cursor="Hand" ToolTip="Minimizes the PTLauncher" IsTabStop="False" Focusable="False">
                     <Button.Template>
                         <ControlTemplate>
                             <Border Margin="1,-5" BorderThickness="1">
@@ -42,8 +42,8 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                
-                <Button VerticalAlignment="Center" Click="Button_Click"  Cursor="Hand" ToolTip="Closes the PTLauncher">
+
+                <Button VerticalAlignment="Center" Click="Button_Click"  Cursor="Hand" ToolTip="Closes the PTLauncher" IsTabStop="False" Focusable="False">
                     <Button.Template>
                         <ControlTemplate>
                             <Border Margin="1,-5" BorderThickness="3">
