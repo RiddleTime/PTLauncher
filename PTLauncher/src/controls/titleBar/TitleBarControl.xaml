@@ -19,7 +19,30 @@
                 PTLauncher
             </TextBlock>
 
-            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button VerticalAlignment="Center" Click="Button_Click_1"  Cursor="Hand" ToolTip="Minimizes the PTLauncher">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border Margin="1,-5" BorderThickness="1">
+                                <Border.Style>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Border.Background" Value="#65FFFFFF" />
+                                        <Style.Triggers>
+                                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                                <Setter Property="Border.Background" Value="#95FFFFFF" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../../../images/minimize_icon.png" Height="14.6" Margin="2"></Image>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                
                 <Button VerticalAlignment="Center" Click="Button_Click"  Cursor="Hand" ToolTip="Closes the PTLauncher">
                     <Button.Template>
                         <ControlTemplate>

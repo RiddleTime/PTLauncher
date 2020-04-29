@@ -29,5 +29,10 @@ namespace PTLauncher.src.controls.titleBar
         {
             Environment.Exit(0);
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
     }
 }
