@@ -75,8 +75,8 @@
             <ComboBox.ItemTemplate >
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}" TextAlignment="Right" HorizontalAlignment="Right" FontSize="18.5"/>
-                        <TextBlock Text=" | " TextAlignment="Right" HorizontalAlignment="Right"/>
+                        <!--<TextBlock Text="{Binding Name}" TextAlignment="Right" HorizontalAlignment="Right" FontSize="18.5"/>-->
+                        <!--<TextBlock Text=" | " TextAlignment="Right" HorizontalAlignment="Right"/>-->
                         <TextBlock Text="{Binding LocalizedName}" TextAlignment="Right" HorizontalAlignment="Right" FontSize="18.5"/>
                     </StackPanel>
                 </DataTemplate>

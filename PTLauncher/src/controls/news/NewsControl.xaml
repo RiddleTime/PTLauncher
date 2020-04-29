@@ -16,15 +16,15 @@
 
     <StackPanel>
          <!-- Header: 'News' -->
-        <Grid Margin="5,0">
+        <Grid Margin="5,0,1,0">
             <Grid.Background>
-                <RadialGradientBrush SpreadMethod="Pad" Center="0.5, 0.55" >
-                    <GradientStop Color="#972F0F00" Offset="0.5" />
-                    <GradientStop Color="#00000000" Offset="0.9" />
+                <RadialGradientBrush SpreadMethod="Pad" Center="0.5, 0.5" >
+                    <GradientStop Color="#572F0F00" Offset="0.3" />
+                    <GradientStop Color="#11000000" Offset="0.9" />
                 </RadialGradientBrush>
             </Grid.Background>
             
-            <TextBlock Height="30" Text="News" FontSize="30" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Center" Margin="0,0,5,0" />
+            <TextBlock Height="30" Text="News" FontSize="31" FontFamily="{StaticResource FontHemiHead}" Foreground="White" TextAlignment="Center" Margin="0,0,5,0" />
         </Grid>
 
         <Grid Margin="0,1"></Grid>
@@ -93,12 +93,12 @@
                 <DataTemplate>
                     <Grid x:Name="mainGrid" MinHeight="90" ForceCursor="False" Cursor="Hand">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="140"></ColumnDefinition>
+                            <ColumnDefinition Width="145"></ColumnDefinition>
                             <ColumnDefinition Width="315"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.Resources>
                             <Style TargetType="Border">
-                                <Setter Property="Padding" Value="5,5,5,5" />
+                                <Setter Property="Padding" Value="4,4,4,4" />
                             </Style>
                         </Grid.Resources>
                         <Grid.Style>
@@ -116,15 +116,15 @@
                         <!--Show Image-->
                         <Border Grid.Column="0">
                             <Grid Visibility="{Binding HasImage, Converter={StaticResource BoolToVisibilityConverter}}">
-                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Center" Stretch="Uniform" Width="146" />
+                                <Image Source="{Binding ImageSource}" HorizontalAlignment="Stretch" Stretch="Uniform" Width="137" />
                             </Grid>
                         </Border>
 
                         
                         <!--Show date and title-->
                         <Border Grid.Column="1" >
-                            <StackPanel>
-                                <TextBlock Text="{Binding DateTime}" FontSize="14.2" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,2,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
+                            <StackPanel Margin="0,2">
+                                <TextBlock Text="{Binding DateTime}" FontSize="14.2" FontFamily="{StaticResource FontHemiHead}" Foreground="#DFFFFFFF" TextAlignment="Right" Margin="0,0,4,0" FontStretch="ExtraExpanded" FontWeight="Thin" VerticalAlignment="Center" >
                                     <TextBlock.Background>
                                         <LinearGradientBrush EndPoint="1,1" StartPoint="0.1,0.1">
                                             <GradientStop Color="#00000000" Offset="0"/>
@@ -133,7 +133,7 @@
                                     </TextBlock.Background>
                                 </TextBlock>
 
-                                <TextBlock Text="{Binding Title}" FontSize="22.5"  FontFamily="{StaticResource FontHemiHead}" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
+                                <TextBlock Text="{Binding Title}" FontSize="21.9"  FontFamily="{StaticResource FontHemiHead}" FontWeight="Light" Foreground="White" TextAlignment="Left" TextWrapping="WrapWithOverflow" Margin="5,3,12,0"/>
                             </StackPanel>
                         </Border>
                     </Grid>
