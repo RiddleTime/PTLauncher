@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Diagnostics;
 using PTLauncher.News;
+using PTLauncher.Language;
 
 namespace PTLauncher
 {
@@ -33,17 +34,17 @@ namespace PTLauncher
         {
             Process ProjectTorque = new Process();
 
-            ProjectTorque.StartInfo.FileName = "ProjectTorque.exe"; // Needs to be full path
-            ProjectTorque.StartInfo.Arguments = MainVM.selectedPlace.ToString(); // If you have any arguments
+            ProjectTorque.StartInfo.FileName = "ProjectTorque.exe";
+            ProjectTorque.StartInfo.Arguments = "lang=" + LanguagePersistence.LoadLanguage().Parameter;
 
             bool result = ProjectTorque.Start();
-            Debug.WriteLine(ProjectTorque.StartInfo.FileName);
-            Debug.WriteLine(ProjectTorque.StartInfo.Arguments);
 
-            Debug.WriteLine("Exit Launcher, Project Torque started.");
-            Environment.Exit(0);
+            if (result)
+            {
+                Debug.WriteLine("Exit Launcher, Project Torque started.");
+                Environment.Exit(0);
+            }
         }
-
         private void Button_Discord(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://discordapp.com/invite/hVNTPe2");
