@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              Width="auto"
              Height="auto"
-             d:DesignHeight="475" d:DesignWidth="480">
+             d:DesignHeight="485" d:DesignWidth="480">
     <UserControl.Resources>
         <ptlauncher:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></ptlauncher:BoolToVisibilityConverter>
     </UserControl.Resources>

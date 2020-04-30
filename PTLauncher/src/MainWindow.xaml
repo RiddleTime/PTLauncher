@@ -41,7 +41,7 @@
 
             <languageControl:LanguageControl Margin="2,7,4,338" Grid.Column="3"/>
 
-            <Button x:Name="play" Margin="13,343,18,12" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand" Grid.Column="3"  Background="#FF000000">
+            <Button x:Name="play" Margin="15,348,16,7" Click="Button_Play" Panel.ZIndex="1" Cursor="Hand" Grid.Column="3"  Background="#FF000000">
                 <Button.Template>
                     <ControlTemplate>
                         <Border HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64" >
@@ -92,7 +92,7 @@
             <Label x:Name="textbox" HorizontalAlignment="Left" Margin="34,343,0,0" VerticalAlignment="Top" Width="243" Height="44" Grid.Column="2"/>
 
 
-            <news:NewsControl HorizontalAlignment="Left" Margin="7,4,0,0" VerticalAlignment="Top" Width="465" Height="475" Grid.ColumnSpan="2" Grid.Column="1"></news:NewsControl>
+            <news:NewsControl HorizontalAlignment="Left" Margin="7,4,0,0" VerticalAlignment="Top" Width="465" Height="485" Grid.ColumnSpan="2" Grid.Column="1" Loaded="NewsControl_Loaded"></news:NewsControl>
 
         </Grid>
 

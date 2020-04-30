@@ -16,10 +16,17 @@ namespace PTLauncher.src.controls.language
         {
             InitializeComponent();
             DataContext = this;
-            ComboBoxLanguages.ItemsSource = GameLanguage.Languages;
-            
-            // Todo use LanguagePersistance (either registry or local file with option )
-            ComboBoxLanguages.SelectedItem = GameLanguage.Languages.ElementAt(1);
+            ComboBoxLanguages.ItemsSource = LanguagePersistence.Languages;
+            ComboBoxLanguages.SelectedItem = LanguagePersistence.LoadLanguage();
+        }
+
+        private void ComboBoxLanguages_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((e.AddedItems) != null)
+            {
+                GameLanguage language = (e.AddedItems[0] as GameLanguage);
+                LanguagePersistence.SaveLangauge(language);
+            }
         }
     }
 }

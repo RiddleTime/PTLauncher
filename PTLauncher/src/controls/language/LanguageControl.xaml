@@ -71,7 +71,7 @@
             </TextBlock>
         </Grid>
         
-        <ComboBox x:Name="ComboBoxLanguages" Height="26" FontSize="20" FontFamily="{StaticResource FontHemiHead}" HorizontalContentAlignment="Center" Cursor="Hand" Background="Transparent">
+        <ComboBox x:Name="ComboBoxLanguages" Height="26" FontSize="20" FontFamily="{StaticResource FontHemiHead}" HorizontalContentAlignment="Center" Cursor="Hand" Background="Transparent" SelectionChanged="ComboBoxLanguages_SelectionChanged">
             <ComboBox.ItemTemplate >
                 <DataTemplate >
                     <StackPanel Orientation="Horizontal">
