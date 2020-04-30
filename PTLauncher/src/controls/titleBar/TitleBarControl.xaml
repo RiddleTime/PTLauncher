@@ -3,9 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             xmlns:ptlauncher="clr-namespace:PTLauncher"
+             
              xmlns:local="clr-namespace:PTLauncher.src.controls.titleBar"
              mc:Ignorable="d" 
              d:DesignHeight="25" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ptlauncher:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></ptlauncher:BoolToVisibilityConverter>
+    </UserControl.Resources>
     <StackPanel Background="#7F000000" Orientation="Horizontal" Width="800">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -14,11 +20,18 @@
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
 
-
+            <!-- Software Title-->
             <TextBlock Grid.Column="0" FontFamily="{StaticResource FontHemiHead}" FontSize="18" FontWeight="UltraLight" Foreground="#7FFFFFFF" VerticalAlignment="Center" Margin="5,0">
                 PTLauncher
             </TextBlock>
 
+            <!-- Login server indicator-->
+            <StackPanel Grid.Column="1" Margin="3,0" HorizontalAlignment="Left">
+                 <Image Source="{Binding LoginServerImage}" Height="18" Width="18" Margin="0,4,0,0" VerticalAlignment="Center" ToolTip="Shows whether you can reach the loginserver."></Image>
+            </StackPanel>
+
+            
+            <!-- Minimize and Exit button-->
             <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button VerticalAlignment="Center" Click="Button_Click_1"  Cursor="Hand" ToolTip="Minimizes the PTLauncher" IsTabStop="False" Focusable="False">
                     <Button.Template>

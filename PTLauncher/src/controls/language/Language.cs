@@ -49,6 +49,7 @@ namespace PTLauncher.Language
         public static GameLanguage LoadLanguage()
         {
             LauncherSettings settings = LauncherSettings.Load();
+
             if (settings.Language == null)
             {
                 LauncherSettings clean = new LauncherSettings();
@@ -57,6 +58,7 @@ namespace PTLauncher.Language
             }
 
             GameLanguage loadedLanguage = Languages.Where(language => language.Parameter == settings.Language).FirstOrDefault();
+
             if (loadedLanguage == null)
                 loadedLanguage = GetDefaultLanguage();
 

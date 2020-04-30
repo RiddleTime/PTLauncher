@@ -66,11 +66,6 @@ namespace PTLauncher
                 Process.Start(newsItemUrl);
             }
         }
-
-        private void NewsControl_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
 
