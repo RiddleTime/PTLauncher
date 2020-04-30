@@ -14,7 +14,7 @@ namespace PTLauncher.Language
             new GameLanguage() { Name = "English",      Parameter = "en", LocalizedName = "English"},
             new GameLanguage() { Name = "Estonian",     Parameter = "et", LocalizedName = "Eesti"},
             new GameLanguage() { Name = "Spanish",      Parameter = "es", LocalizedName = "Español"},
-            new GameLanguage() { Name = "French",       Parameter = "et", LocalizedName = "Français"},
+            new GameLanguage() { Name = "French",       Parameter = "fr", LocalizedName = "Français"},
             new GameLanguage() { Name = "Italian",      Parameter = "it", LocalizedName = "Italiano"},
             new GameLanguage() { Name = "Hungarian",    Parameter = "hu", LocalizedName = "Magyar"},
             new GameLanguage() { Name = "Dutch",        Parameter = "nl", LocalizedName = "Nederlands"},
