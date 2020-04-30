@@ -27,7 +27,7 @@
 
             <!-- Login server indicator-->
             <StackPanel Grid.Column="1" Margin="3,0" HorizontalAlignment="Left">
-                 <Image Source="{Binding LoginServerImage}" Height="18" Width="18" Margin="0,4,0,0" VerticalAlignment="Center" ToolTip="Shows whether you can reach the loginserver."></Image>
+                 <Image Source="{Binding LoginServerImage}" Height="18" Width="18" Margin="0,4,0,0" VerticalAlignment="Center" ToolTip="Shows green if you can reach the Login Server"></Image>
             </StackPanel>
 
             
