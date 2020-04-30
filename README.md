@@ -6,15 +6,10 @@ It uses WPF from Visual Studios 2019
 This is a fork from: https://bitbucket.org/JOGARA/ptlauncher/src/master/
 
 ### Planned features  ###
-
 * Links to website, forum, discord, steam community and to buy GP (90% done)
-* News from Steam hub via Steam Web API (95% done)
-* Language select via drop down or flag buttons (80% done)
 
 
 ### Extras being worked on ###
-
-* Save langauge choice 
 * Check login server online/ user can reach server, check uPnP is enabled and works and display this info with graphics
 
 ### More info ###
