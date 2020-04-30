@@ -29,18 +29,22 @@ namespace PTLauncher.News
             {
                 using (dynamic steamNews = WebAPI.GetInterface("ISteamNews"))
                 {
-                    KeyValue kvNews = steamNews.GetNewsForApp(appid: 1112400, maxlength: 2000);
-
-                    foreach (KeyValue news in kvNews["newsitems"]["newsitem"].Children)
+                    try
                     {
-                        GameNews.Add(new GameNews
+                        KeyValue kvNews = steamNews.GetNewsForApp(appid: 1112400, maxlength: 2000);
+
+                        foreach (KeyValue news in kvNews["newsitems"]["newsitem"].Children)
                         {
-                            dateTime = DateUtils.DateTimeFromUnixTime(news["date"].AsUnsignedLong()),
-                            Title = news["title"].AsString(),
-                            ImageSource = FindImageSource(news["contents"].AsString()),
-                            Url = news["url"].AsString(),
-                        });
+                            GameNews.Add(new GameNews
+                            {
+                                dateTime = DateUtils.DateTimeFromUnixTime(news["date"].AsUnsignedLong()),
+                                Title = news["title"].AsString(),
+                                ImageSource = FindImageSource(news["contents"].AsString()),
+                                Url = news["url"].AsString(),
+                            });
+                        }
                     }
+                    catch { }
                 }
             }
 
