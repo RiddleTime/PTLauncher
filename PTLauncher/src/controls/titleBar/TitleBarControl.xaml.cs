@@ -23,9 +23,8 @@ namespace PTLauncher.src.controls.titleBar
     /// </summary>
     public partial class TitleBarControl : UserControl
     {
-        private ImageSource loginServerImage { get; set; }
+        private ImageSource loginServerImage { get; set; } = new BitmapImage(new Uri(@"pack://application:,,,/" + Assembly.GetExecutingAssembly().GetName().Name + ";component/" + "images/connected_true.png", UriKind.Absolute));
         public ImageSource LoginServerImage { get { return loginServerImage; } set { loginServerImage = value; } }
-
         public TitleBarControl()
         {
             InitializeComponent();
